@@ -1,0 +1,120 @@
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .textEditor {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .menuBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .menuBar > div {
+    display: flex;
+    gap: 8px;
+  }
+  
+  button {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  button:hover {
+    background: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+  }
+  
+  button.is_active {
+    background: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+  }
+  
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Icons Styling */
+  button svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Heading Icon for Level 3 */
+  button .heading3 {
+    font-size: 0.8em;
+  }
+  
+  /* Editor Content Styling */
+  .ProseMirror {
+    min-height: 300px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .ProseMirror:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Smooth Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .textEditor {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .menuBar {
+      flex-direction: column;
+    }
+  
+    button {
+      flex: 1;
+      margin: 4px 0;
+    }
+  }
+  
